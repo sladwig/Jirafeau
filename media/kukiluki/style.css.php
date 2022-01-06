@@ -52,7 +52,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.5;
-  background-image: url(p1.jpg);
+  background-image: url(bg1.jpg);
   background-size: cover;
 }
 
