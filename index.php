@@ -164,6 +164,13 @@ elseif (true === jirafeau_challenge_upload_ip($cfg, get_ip_address($cfg))) {
     <legend>
     <?php echo t('SEL_FILE'); ?>
     </legend>
+    <svg xmlns="http://www.w3.org/2000/svg" width="260" height="189" viewBox="-42.912 -27.073 260 189" overflow="visible" xml:space="preserve">
+      <g id="plus">
+        <path d="M83.244 58.862v25.472c0 4.514 7 4.514 7 0V58.862c0-4.514-7-4.514-7 0z" />
+        <path d="M74.008 75.098h25.473c4.514 0 4.514-7 0-7H74.008c-4.514 0-4.514 7 0 7z"/>
+      </g>
+      <path id="file" d="M73.893 18.588 51.289 0H0v125.297h174.176V18.588H73.893zm13.138 82.957c-16.318 0-29.546-13.228-29.546-29.545 0-16.318 13.228-29.546 29.546-29.546 16.317 0 29.545 13.228 29.545 29.546 0 16.317-13.227 29.545-29.545 29.545z" />
+    </svg>
     <p>
         <input type="file" id="file_select" size="30"
     onchange="control_selected_file_size(<?php echo $cfg['maximal_upload_size'] ?>, '<?php

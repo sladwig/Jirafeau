@@ -46,14 +46,20 @@ header('Content-type: text/css');
    1 = Basic Style
    ========================================================================== */
 
+:root {
+  --color-font: #B1310D;
+  --color-border: rgba(49,49,49,.6);
+  --animation-border: all 0.4s ease-out;
+}
+
 body {
-  color: #fff;
+  color: var(--color-font);
   background: #212121;
   font-family: Arial, sans-serif;
   margin: 0;
   line-height: 1.5;
   background-image: url(bg1.jpg);
-  background-size: cover;
+  background-size: auto cover;
 }
 
 #content {
@@ -83,20 +89,24 @@ fieldset {
   margin: 0 auto;
   border-radius: 8px;
   width: 20em;
-  border: 7px dashed #7d7d7d;
+  border: 7px dashed var(--color-border);
   min-height: 15em;
   min-width: 30em;
   position: relative;
 }
 
 legend {
-  padding: 0.5em 1em;
-  background: #212121;
-  color: #e5e5e5;
+  padding: 0.5em 0.5em;
+  background: var(--color-border);
+  opacity: 0.6;
+  color: #fff;
+  border-radius: 0.5em;
   font-size: 1.2em;
+  font-weight: bold;
   display: block;
   min-width: 8em;
   text-align: center;
+  transition: var(--animation-border);
 }
 
 table a {
@@ -144,18 +154,37 @@ input[type="submit"]:focus {
 }
 
 #upload fieldset {
-  background: url(upload.svg) no-repeat center;
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: var(--animation-border);
+  position: relative;
+}
+#upload svg {
+  position: absolute;
+}
+#upload #plus, #upload #file {
+  transition: var(--animation-border);
+  fill: var(--color-border);
 }
 
-#upload fieldset:hover {
-  border-color: #e5e5e5;
+#upload:hover #plus {
+  fill: var(--color-font);
+}
+#upload:hover #file {
+  fill: #fff;
 }
 
+#upload:hover fieldset {
+  border-color: #fff;
+}
+#upload:hover legend { 
+  /* color: rgba(0,0,0,0); */
+  color: var(--color-font);
+  background: #fff;
+  opacity: 1;
+}
 #upload > form {
   text-align: center;
 }
@@ -187,12 +216,12 @@ input[type="submit"]:focus {
 #copyright {
   text-align: center;
   font-size: 0.8em;
-  color: #bbb;
+  color: var(--color-font);
   margin: 3em auto;
 }
 
 #copyright a {
-  color: #bbb;
+  color: var(--color-font);
   text-decoration: none;
 }
 
@@ -474,3 +503,4 @@ textarea[readonly="readonly"] + p + p a:focus {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
