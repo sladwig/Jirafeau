@@ -275,7 +275,7 @@ input[type="submit"]:focus {
 }
 
 #upload_finished > p:nth-child(1) {
-  color: #0D9CB2;
+  color: #B1310D;
   font-weight: bold;
 }
 
