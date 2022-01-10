@@ -98,9 +98,6 @@ if (!empty($delete_code) && $delete_code == $link['link_code']) {
              <?php echo t('GONNA_DEL') . ' "' . jirafeau_escape($link['file_name']) . '" (' . jirafeau_human_size($link['file_size']) . ').' ?>
              </td></tr>
              <tr><td>
-                <?php echo t('USING_SERVICE'). ' <a href="tos.php" target="_blank" rel="noopener noreferrer">' . t('TOS') . '</a>.' ?>
-             </td></tr>
-             <tr><td>
                 <input type="submit" id="submit_delete"  value="<?php echo t('DELETE'); ?>"
                 onclick="document.getElementById('submit_delete_post').action='<?php echo 'f.php?h=' . $link_name . '&amp;d=' . $delete_code . "';"; ?>
                 document.getElementById('submit_delete').submit ();"/>
