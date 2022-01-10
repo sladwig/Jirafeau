@@ -164,6 +164,9 @@ input[type="submit"]:focus {
 #upload svg {
   position: absolute;
 }
+#upload.file-selected svg {
+  position: relative;
+}
 #upload #plus, #upload #file {
   transition: var(--animation-border);
   fill: var(--color-border);
